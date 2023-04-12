@@ -1,4 +1,3 @@
-import javax.script.ScriptContext;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -37,8 +36,6 @@ public class Runner {
     }
 
     public void displayFlights(){
-//        Scanner scanner = new Scanner(System.in);
-//        we need to ask a question here
         if (flights.size() == 0) {
             System.out.println("No available flights Q_Q");
         }   else {
@@ -98,12 +95,12 @@ public class Runner {
                 case 3:
                     displayFlights();
                     break;
-                case 4:
-                    bookPassenger();
-                    break;
-                case 5:
-                    cancelFlight(); //uh oh
-                    break;
+//                case 4:
+//                    bookPassenger();
+//                    break;
+//                case 5:
+//                    cancelFlight(); //uh oh
+//                    break;
                 case 6:
                     System.out.println("Goodbye, Thank you for using our app hehe");
                     running = false;
