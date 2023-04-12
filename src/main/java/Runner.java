@@ -1,3 +1,4 @@
+import javax.script.ScriptContext;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -54,11 +55,24 @@ public class Runner {
         System.out.println("Enter flight ID please");
         Integer flightId = scanner.nextInt();
 
-    if (passenger.getId() == passengerId && flight.getId() == flightId) {
-        flight.addPassengerToFlight(passenger);
-    }   else {
-        System.out.println("Please enter valid details"); }
+        if (passenger.getId() == passengerId && flight.getId() == flightId) {
+            flight.addPassengerToFlight(passenger);
+        }   else {
+            System.out.println("Please enter valid details"); }
     }
+
+    public void cancelFlight(Flight flight){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your flight number");
+        Integer flightId = scanner.nextInt();
+        if(flightId == flight.getId()){
+            flights.remove(flight);
+            System.out.println("Your flight has been cancelled");
+        } else {
+            System.out.println("Please enter valid flight ID");
+        }
+    }
+
     public static void main(String[] args) {
 
 //        TODO: ADD A NEW FLIGHT
