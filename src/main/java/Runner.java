@@ -45,6 +45,20 @@ public class Runner {
             }
         }
     }
+
+    public void bookPassenger(Flight flight, Passenger passenger){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter passport number please");
+        Integer passengerId = scanner.nextInt();
+
+        System.out.println("Enter flight ID please");
+        Integer flightId = scanner.nextInt();
+
+    if (passenger.getId() == passengerId && flight.getId() == flightId) {
+        flight.addPassengerToFlight(passenger);
+    }   else {
+        System.out.println("Please enter valid details"); }
+    }
     public static void main(String[] args) {
 
 //        TODO: ADD A NEW FLIGHT

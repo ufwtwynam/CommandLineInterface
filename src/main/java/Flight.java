@@ -4,12 +4,12 @@ public class Flight {
 
     private String destination;
     private int flightId;
-    private ArrayList<Passenger> passengers;
+    private ArrayList<Passenger> passengersOnFlight;
 
     public Flight(String destination, int id) {
         this.destination = destination;
         this.flightId = id;
-        this.passengers = new ArrayList<>();
+        this.passengersOnFlight = new ArrayList<>();
     }
 
     public String getDestination() {
@@ -28,7 +28,7 @@ public class Flight {
         this.flightId = id;
     }
 
-    public void addNewPassenger(Passenger passenger) {
-        this.passengers.add(passenger);
+    public void addPassengerToFlight(Passenger passenger) {
+        this.passengersOnFlight.add(passenger);
     }
 }
