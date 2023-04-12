@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class Runner {
 
-    private ArrayList<Passenger> passengers = new ArrayList<>();
-    private ArrayList<Flight> flights = new ArrayList<>();
+    private static ArrayList<Passenger> passengers = new ArrayList<>();
+    private static ArrayList<Flight> flights = new ArrayList<>();
 
-    public void addNewPassenger(){
+    public static void addNewPassenger(){
         Scanner scanner = new Scanner(System.in);
         String passengerName = scanner.nextLine();
         System.out.println("Please enter your name");
@@ -24,7 +24,7 @@ public class Runner {
         passengers.add(passenger);
     }
 
-    public void addNewFlight(){
+    public static void addNewFlight(){
         Scanner scanner = new Scanner(System.in);
         String destination = scanner.nextLine();
         System.out.println("Where would you like to fly to? (>^_^)>");
@@ -35,7 +35,7 @@ public class Runner {
         flights.add(flight);
     }
 
-    public void displayFlights(){
+    public static void displayFlights(){
         if (flights.size() == 0) {
             System.out.println("No available flights Q_Q");
         }   else {
@@ -71,7 +71,7 @@ public class Runner {
         }
     }
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         boolean running = true;
         while (running){
             System.out.println("Please select an option:");
