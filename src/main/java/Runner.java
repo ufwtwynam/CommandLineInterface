@@ -23,6 +23,28 @@ public class Runner {
         Passenger passenger = new Passenger(passengerName, passengerNumber, passengerEmail, passportNumber);
         passengers.add(passenger);
     }
+
+    public void addNewFlight(){
+        Scanner scanner = new Scanner(System.in);
+        String destination = scanner.nextLine();
+        System.out.println("Where would you like to fly to? (>^_^)>");
+        Integer flightId = scanner.nextInt();
+        System.out.println("What is your flight number <(^_^<)");
+
+        Flight flight = new Flight(destination, flightId);
+        flights.add(flight);
+    }
+
+    public void displayFlights(){
+        Scanner scanner = new Scanner(System.in);
+        if (flights.size() == 0) {
+            System.out.println("No available flights Q_Q");
+        }   else {
+            for (Flight flight : flights) {
+                System.out.println(flight.getDestination());
+            }
+        }
+    }
     public static void main(String[] args) {
 
 //        TODO: ADD A NEW FLIGHT
