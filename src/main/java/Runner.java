@@ -37,7 +37,8 @@ public class Runner {
     }
 
     public void displayFlights(){
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//        we need to ask a question here
         if (flights.size() == 0) {
             System.out.println("No available flights Q_Q");
         }   else {
@@ -73,7 +74,44 @@ public class Runner {
         }
     }
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
+        boolean running = true;
+        while (running){
+            System.out.println("Please select an option:");
+            System.out.println("1. Add Passenger");
+            System.out.println("2. Add a New Flight");
+            System.out.println("3. Display Flights");
+            System.out.println("4. Book Passengers");
+            System.out.println("5. Cancel Flight");
+            System.out.println("6. Exit");
+
+            Scanner scanner = new Scanner(System.in);
+            Integer choice = scanner.nextInt();
+
+            switch(choice){
+                case 1:
+                    addNewPassenger();
+                    break;
+                case 2:
+                    addNewFlight();
+                    break;
+                case 3:
+                    displayFlights();
+                    break;
+                case 4:
+                    bookPassenger();
+                    break;
+                case 5:
+                    cancelFlight(); //uh oh
+                    break;
+                case 6:
+                    System.out.println("Goodbye, Thank you for using our app hehe");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid choice");
+            }
+        }
 
 //        TODO: ADD A NEW FLIGHT
 //        ask passenger what flight they want to be, has to follow format of flight constructor
