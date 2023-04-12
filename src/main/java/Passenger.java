@@ -3,13 +3,13 @@ public class Passenger {
     private String name;
     private int phoneNumber;
     private String emailAddress;
-    private int id;
+    private int passportNumber;
 
     public Passenger(String name, int phoneNumber, String emailAddress, int id) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.emailAddress = emailAddress;
-        this.id = id;
+        this.passportNumber = id;
     }
 
     public String getName() {
@@ -37,10 +37,10 @@ public class Passenger {
     }
 
     public int getId() {
-        return id;
+        return passportNumber;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.passportNumber = id;
     }
 }
